@@ -17,27 +17,22 @@
 #define MINUSINF numeric_limits<int>::min()
 #define FOR(i, a, b) for (int i = a; i <= b; i++)
 #define REP(i, n) for (int i = 0; i < n; i++)
+#define max3(a, b, c) max(a, b) > max(b, c) ? max(a, b) : max(b, c)
+#define min3(a, b, c) min(a, b) < min(b, c) ? min(a, b) : min(b, c)
+
+//   ios_base::sync_with_stdio(false);cin.tie(NULL);   // FAST IO
 
 using namespace std;
 
-void init(vector<vector<pair<int,int> > > graph,vector<int> distance, vector<bool> flag,int n ){
-    graph.resize(n);
-    REP(i,n){
-        distance[i]=INF;
-        flag[i]=false;
-    }
-}
-
-
-int main(){
-    int testno,n,m;
-    cin>>testno;
-    FOR(test,0,testno){
-        cin>>n>>m;
-        vector< vector<pair<int,int> > > graph;
-        vector<int> distance(n);
-        vector<bool> flag(n);
-        init(graph, distance,flag,n);
-    }
-
+int main() {
+  ios_base::sync_with_stdio(false);cin.tie(NULL);
+  int testno;
+  cin >> testno;
+  FOR(test, 1, testno) {
+    printf("Case %d: ", test);
+    double ab, area,a1,a2,a3;
+    cin >> ab >> a1 >> a2 >> area;
+    printf("%.10lf\n", ab * sqrt(area / (1 + area)));
+  }
+  return 0;
 }
